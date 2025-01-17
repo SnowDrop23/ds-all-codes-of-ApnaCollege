@@ -14,8 +14,10 @@ vector<int> pairSum(vector<int> &nums, int target)
         else if(pairSum < target) i++;
         else
         {
-            ans.push_back(i);
-            ans.push_back(j);
+            ans.push_back(i); // return index i
+            ans.push_back(j); // return index j
+            //ans.push_back(nums[i]); // return value of i-th index
+            //ans.push_back(nums[j]); // return value of j-th index
             return ans;
         }
     }
