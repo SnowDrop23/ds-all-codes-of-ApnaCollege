@@ -14,22 +14,24 @@ int majorityElement(vector<int>&nums)
 		else count--;
 		
 	}
+	// Second pass: Verify the candidate, whether it is the majority or not!!
 	count = 0;
 	for(int i = 0; i < n; i++) 
 	{
 		if(nums[i] == candidate) count++;
 	}
+	// If count > n/2, candidate is the majority!!!
 	if(count > n/2) return candidate;
 	else return -1;
 	
 }
 int main ()
 {
-   int n;
-  cout << "Enter size: ";
+        int n;
+        cout << "Enter size: ";
 	cin >> n;
 	vector<int> nums(n);
-  cout << "Enter elements: ";
+        cout << "Enter elements: ";
 	for(int i = 0; i < n; i++) cin >> nums[i];
 	
 
