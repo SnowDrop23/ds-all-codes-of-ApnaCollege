@@ -1,2 +1,2 @@
 # ds-all-codes-of-ApnaCollege
-In this repo i'll be uploading all of the codes i've done and will be done throughtout the DSA series!
+In this repo, I'll be uploading all of the codes I've done and will be done throughout the DSA series!
