@@ -14,8 +14,9 @@ int mostWater(vector<int> &arr)
         int ans = width * hight;
         most_water = max(ans, most_water);
 
-        if(arr[left_pointer] < arr[right_pointer]) left_pointer++;
-        else right_pointer--;
+        arr[left_pointer] < arr[right_pointer] ? left_pointer++ : right_pointer--;
+        //if(arr[left_pointer] < arr[right_pointer]) left_pointer++;
+        //else right_pointer--;
     }
     return most_water;
 }
