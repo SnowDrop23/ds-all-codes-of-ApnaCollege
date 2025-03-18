@@ -20,7 +20,7 @@ void bubbleSort(int arr[], int n)
 			}
 		}
 	}
-	printArray(arr, n);
+	
 }
 
 int main()
@@ -31,4 +31,5 @@ int main()
 	int arr[n];
 	for(int i = 0; i < n; i++) cin >> arr[i];
 	bubbleSort(arr, n);
+	printArray(arr, n);
 } 
