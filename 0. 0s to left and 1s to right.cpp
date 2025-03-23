@@ -1,3 +1,7 @@
+// nums = [1,0,1,0,1]
+//       to
+// nums = [0,0,1,1,1]
+
 #include <iostream>
 #include <vector>
 using namespace std;
