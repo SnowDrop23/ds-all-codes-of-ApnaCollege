@@ -17,7 +17,7 @@ bool isPalindrome(string &str)
 
     while(start < end)
     {
-        if(!isAlphaNum(str[start]))
+        if(!isAlphaNum(str[start])) // or if(!iswalnum(str[start])) , built-in function for checking Alpha Numeric Characters
         {
             start++;
             continue;
