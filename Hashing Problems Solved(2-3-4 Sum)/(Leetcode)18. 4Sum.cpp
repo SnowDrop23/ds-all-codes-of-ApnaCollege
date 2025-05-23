@@ -44,7 +44,7 @@ vector<vector<int>> fourSum(vector<int>& nums, int target)
             }
 
             // Move j to the next different value (skip duplicates for the second number)
-            j++;
+            j++; //It's placed at the end so the loop has full control over when and how to increment and skip duplicates.
             while(j < n && nums[j] == nums[j - 1]) j++;
         }
     }
