@@ -35,24 +35,27 @@ vector<string> findPath(vector<vector<int>> &mat)
 {
     int n = mat.size();
     vector<string> ans;
-
-    // Edge case: if starting or ending cell is blocked
-    if (mat[0][0] == 0 || mat[n - 1][n - 1] == 0)
-        return {};
-
+    string path = "";
     // Start the recursive backtracking from (0,0)
-    helper(mat, 0, 0, "", ans);
+    helper(mat, 0, 0, path, ans);
     return ans;
 }
 
 int main()
 {
-    // Define the maze/grid: 1 → open path, 0 → blocked
-    vector<vector<int>> maze = {
-        {1, 0, 0, 0},
-        {1, 1, 0, 1},
-        {1, 1, 0, 0},
-        {0, 1, 1, 1}};
+    int n;
+    cout << "Enter the size of the maze (n x n): ";
+    cin >> n;
+
+    vector<vector<int>> maze(n, vector<int>(n));
+    cout << "Enter the maze row by row (0 for blocked, 1 for open):" << endl;
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < n; ++j)
+        {
+            cin >> maze[i][j];
+        }
+    }
 
     // Call function to get all paths from (0,0) to (n-1,n-1)
     vector<string> paths = findPath(maze);
