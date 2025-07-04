@@ -18,10 +18,10 @@ void get_all_combination(vector<int>& arr, int idx, int tar,
 
     // include current element and stay at idx
     combin.push_back(arr[idx]);
-    get_all_combination(arr, idx, tar - arr[idx], ans, combin);
+    get_all_combination(arr, idx + 1, tar - arr[idx], ans, combin); //single
 
     // include current element and move to next idx
-    get_all_combination(arr, idx + 1, tar - arr[idx], ans, combin);
+    get_all_combination(arr, idx, tar - arr[idx], ans, combin); //multiple
 
     // backtrack
     combin.pop_back();
